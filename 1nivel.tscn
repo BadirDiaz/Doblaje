@@ -1,0 +1,188 @@
+[gd_scene load_steps=16 format=3 uid="uid://dq62xs38nku0r"]
+
+[ext_resource type="Script" path="res://1nivel.gd" id="1_mgyvj"]
+[ext_resource type="Texture2D" uid="uid://dwnlyvte5jdiy" path="res://Assets/dbz.jpg" id="2_gfq02"]
+[ext_resource type="Texture2D" uid="uid://b6knwni7e44lk" path="res://Assets/Humberto.png" id="3_dh17q"]
+[ext_resource type="Texture2D" uid="uid://cpogypiogu16u" path="res://Assets/carlos.png" id="4_jhc6p"]
+[ext_resource type="Texture2D" uid="uid://d2nou7vanmkj2" path="res://Assets/Rene.png" id="5_1l6ms"]
+[ext_resource type="Texture2D" uid="uid://c7ut3x8lksaxp" path="res://Assets/mario.png" id="6_sv6i5"]
+[ext_resource type="FontFile" uid="uid://w6ggvui8132u" path="res://Fonts/Saiyan-Sans.ttf" id="6_tumk8"]
+[ext_resource type="Texture2D" uid="uid://nwi3dkjjydxq" path="res://Assets/Goku.png" id="7_lkhxg"]
+[ext_resource type="AudioStream" uid="uid://cd2rsh5020dxv" path="res://Audios/Goku.mp3" id="9_wu7ok"]
+[ext_resource type="Texture2D" uid="uid://bejm1b38s5s0b" path="res://Assets/cuadro.png" id="10_d5vni"]
+[ext_resource type="AudioStream" uid="uid://b0natujoohqg1" path="res://Audios/Correcto.mp3" id="11_282k7"]
+[ext_resource type="AudioStream" uid="uid://civo1sed2aof8" path="res://Audios/Incorrecto.mp3" id="12_dyi65"]
+[ext_resource type="Texture2D" uid="uid://58ph66cww4lg" path="res://Assets/Sonido.png" id="13_qq1dh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xyct"]
+font = ExtResource("6_tumk8")
+font_size = 33
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_crtcy"]
+font_size = 13
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_mgyvj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(181, 321.5)
+scale = Vector2(0.432941, 0.320933)
+texture = ExtResource("2_gfq02")
+
+[node name="Cuadro" type="Sprite2D" parent="."]
+position = Vector2(114, 423)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("10_d5vni")
+
+[node name="Cuadro2" type="Sprite2D" parent="."]
+position = Vector2(254, 423)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("10_d5vni")
+
+[node name="Cuadro3" type="Sprite2D" parent="."]
+position = Vector2(114, 561)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("10_d5vni")
+
+[node name="Cuadro4" type="Sprite2D" parent="."]
+position = Vector2(254, 561)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("10_d5vni")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 59.0
+offset_top = 366.0
+offset_right = 168.0
+offset_bottom = 482.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton"]
+position = Vector2(55, 57)
+scale = Vector2(0.27, 0.295)
+texture = ExtResource("4_jhc6p")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 203.0
+offset_top = 365.0
+offset_right = 306.0
+offset_bottom = 482.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton2"]
+position = Vector2(50.5, 58)
+scale = Vector2(0.2675, 0.295)
+texture = ExtResource("3_dh17q")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = 60.0
+offset_top = 503.0
+offset_right = 168.0
+offset_bottom = 620.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton3"]
+position = Vector2(54.5, 58)
+scale = Vector2(0.2675, 0.295)
+texture = ExtResource("6_sv6i5")
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+offset_left = 200.0
+offset_top = 502.0
+offset_right = 308.0
+offset_bottom = 621.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton4"]
+position = Vector2(53.5, 60)
+scale = Vector2(0.2675, 0.295)
+texture = ExtResource("5_1l6ms")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 33.0
+offset_right = 358.0
+offset_bottom = 78.0
+text = "¿Quien es la voz de Goku?"
+label_settings = SubResource("LabelSettings_0xyct")
+
+[node name="Goku" type="Sprite2D" parent="."]
+position = Vector2(181, 206)
+scale = Vector2(0.1625, 0.1625)
+texture = ExtResource("7_lkhxg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_wu7ok")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 459.0
+offset_right = 162.0
+offset_bottom = 477.0
+text = "Carlos Segundo"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 204.0
+offset_top = 461.0
+offset_right = 309.0
+offset_bottom = 484.0
+text = "Humberto Velez"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 598.0
+offset_right = 167.0
+offset_bottom = 616.0
+text = "Mario Castañeda"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 221.0
+offset_top = 599.0
+offset_right = 298.0
+offset_bottom = 617.0
+text = "Rene Garcia"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 315.0
+offset_right = 266.0
+offset_bottom = 349.0
+label_settings = SubResource("LabelSettings_0xyct")
+horizontal_alignment = 1
+
+[node name="Correcto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_282k7")
+
+[node name="Incorrecto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_dyi65")
+
+[node name="Audio" type="TextureButton" parent="."]
+offset_left = 166.0
+offset_top = 314.0
+offset_right = 206.0
+offset_bottom = 347.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Audio"]
+position = Vector2(21, 17)
+scale = Vector2(0.10625, 0.10625)
+texture = ExtResource("13_qq1dh")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]

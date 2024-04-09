@@ -1,0 +1,188 @@
+[gd_scene load_steps=16 format=3 uid="uid://bns8yr83obi64"]
+
+[ext_resource type="Script" path="res://1nivel.gd" id="1_6i8eu"]
+[ext_resource type="Texture2D" uid="uid://c7jkpek688sca" path="res://Assets/Sofa.jpg" id="2_jk5db"]
+[ext_resource type="Texture2D" uid="uid://bejm1b38s5s0b" path="res://Assets/cuadro.png" id="3_mth1h"]
+[ext_resource type="Texture2D" uid="uid://cnd315illlha8" path="res://Assets/alfonso.png" id="4_gafum"]
+[ext_resource type="Texture2D" uid="uid://b6knwni7e44lk" path="res://Assets/Humberto.png" id="5_k57w5"]
+[ext_resource type="Texture2D" uid="uid://ccyhav2lhq4ge" path="res://Assets/paty.png" id="5_rc51t"]
+[ext_resource type="Texture2D" uid="uid://tcsfl7xuj2rh" path="res://Assets/enzo.png" id="7_b65s2"]
+[ext_resource type="FontFile" uid="uid://b8kt0l4ntiwhp" path="res://Fonts/Simpsonfont DEMO.otf" id="8_f1s6m"]
+[ext_resource type="Texture2D" uid="uid://3wkm11vjhawd" path="res://Assets/Homero.jpg" id="9_w4fcd"]
+[ext_resource type="AudioStream" uid="uid://cd2rsh5020dxv" path="res://Audios/Goku.mp3" id="10_bmtuu"]
+[ext_resource type="AudioStream" uid="uid://b0natujoohqg1" path="res://Audios/Correcto.mp3" id="11_teifv"]
+[ext_resource type="AudioStream" uid="uid://civo1sed2aof8" path="res://Audios/Incorrecto.mp3" id="12_s8ln0"]
+[ext_resource type="Texture2D" uid="uid://58ph66cww4lg" path="res://Assets/Sonido.png" id="13_4ippb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xyct"]
+font = ExtResource("8_f1s6m")
+font_size = 25
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_crtcy"]
+font_size = 13
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_6i8eu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(154, 391.75)
+scale = Vector2(0.548177, 0.725463)
+texture = ExtResource("2_jk5db")
+
+[node name="Cuadro" type="Sprite2D" parent="."]
+position = Vector2(114, 423)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("3_mth1h")
+
+[node name="Cuadro2" type="Sprite2D" parent="."]
+position = Vector2(254, 423)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("3_mth1h")
+
+[node name="Cuadro3" type="Sprite2D" parent="."]
+position = Vector2(114, 561)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("3_mth1h")
+
+[node name="Cuadro4" type="Sprite2D" parent="."]
+position = Vector2(254, 561)
+scale = Vector2(0.445017, 0.346559)
+texture = ExtResource("3_mth1h")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 59.0
+offset_top = 366.0
+offset_right = 168.0
+offset_bottom = 482.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton"]
+position = Vector2(55, 57)
+scale = Vector2(0.27, 0.295)
+texture = ExtResource("4_gafum")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 203.0
+offset_top = 365.0
+offset_right = 306.0
+offset_bottom = 482.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton2"]
+position = Vector2(50.5, 58)
+scale = Vector2(0.2675, 0.295)
+texture = ExtResource("5_rc51t")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = 60.0
+offset_top = 503.0
+offset_right = 168.0
+offset_bottom = 620.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton3"]
+position = Vector2(54.5, 58)
+scale = Vector2(0.2675, 0.295)
+texture = ExtResource("5_k57w5")
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+offset_left = 200.0
+offset_top = 502.0
+offset_right = 308.0
+offset_bottom = 621.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton4"]
+position = Vector2(53.5, 60)
+scale = Vector2(0.2675, 0.295)
+texture = ExtResource("7_b65s2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 18.0
+offset_right = 353.0
+offset_bottom = 63.0
+text = "¿Quien  es la voz de Homero?"
+label_settings = SubResource("LabelSettings_0xyct")
+
+[node name="Personaje" type="Sprite2D" parent="."]
+position = Vector2(183, 181.5)
+scale = Vector2(0.287097, 0.27621)
+texture = ExtResource("9_w4fcd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_bmtuu")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 459.0
+offset_right = 168.0
+offset_bottom = 477.0
+text = "Alfonso Obregon"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 214.0
+offset_top = 462.0
+offset_right = 300.0
+offset_bottom = 481.0
+text = "Paty Acevedo"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 599.0
+offset_right = 171.0
+offset_bottom = 617.0
+text = "Humberto Velez"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 214.0
+offset_top = 600.0
+offset_right = 297.0
+offset_bottom = 618.0
+text = "Enzo Fortuny"
+label_settings = SubResource("LabelSettings_crtcy")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 295.0
+offset_right = 258.0
+offset_bottom = 331.0
+label_settings = SubResource("LabelSettings_0xyct")
+horizontal_alignment = 1
+
+[node name="Correcto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_teifv")
+
+[node name="Incorrecto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_s8ln0")
+
+[node name="Audio" type="TextureButton" parent="."]
+offset_left = 161.0
+offset_top = 299.0
+offset_right = 201.0
+offset_bottom = 332.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Audio"]
+position = Vector2(21, 17)
+scale = Vector2(0.10625, 0.10625)
+texture = ExtResource("13_4ippb")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://doh7ikirihjwr"
+path="res://.godot/imported/Y2meta.app - Goku kamehameha Mario Castañeda (128 kbps).mp3-046f55653b58d1bc579dbd9c484a8abb.mp3str"
+
+[deps]
+
+source_file="res://Audios/Y2meta.app - Goku kamehameha Mario Castañeda (128 kbps).mp3"
+dest_files=["res://.godot/imported/Y2meta.app - Goku kamehameha Mario Castañeda (128 kbps).mp3-046f55653b58d1bc579dbd9c484a8abb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
